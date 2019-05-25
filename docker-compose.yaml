@@ -7,3 +7,10 @@ services:
       context: .
     ports:
       - "50051:50051"
+    networks:
+      - default
+      
+networks:
+  default:
+    external:
+      name: books
