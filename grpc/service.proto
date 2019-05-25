@@ -15,10 +15,10 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "io.grpc.examples.booksservice";
-option java_outer_classname = "BooksServiceProto";
+option java_package = "io.grpc.examples.bookservice";
+option java_outer_classname = "BookServiceProto";
 
-package books_service;
+package book_service;
 
 
 // The book service definition

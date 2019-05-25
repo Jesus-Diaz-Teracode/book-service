@@ -2,7 +2,7 @@ package service
 
 import (
 	"context"
-	svc "github.com/jedi4z/books-service/grpc"
+	svc "github.com/Jesus-Diaz-Teracode/book-service/grpc"
 	"log"
 )
 

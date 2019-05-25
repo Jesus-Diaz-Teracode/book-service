@@ -1,8 +1,8 @@
 version: "3"
 services:
-  books_service:
-    hostname: books-service
-    container_name: books-service
+  book_service:
+    hostname: book-service
+    container_name: book-service
     build:
       context: .
     ports:

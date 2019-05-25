@@ -1,6 +1,6 @@
 FROM golang:stretch AS build
 
-WORKDIR /go/src/github.com/jedi4z/books-service
+WORKDIR /go/src/github.com/Jesus-Diaz-Teracode/book-service
 
 COPY . .
 
@@ -13,6 +13,6 @@ FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 
-COPY --from=build /go/src/github.com/jedi4z/books-service/books_service .
+COPY --from=build /go/src/github.com/Jesus-Diaz-Teracode/book-service/books_service .
 
 CMD ["./books_service"]
