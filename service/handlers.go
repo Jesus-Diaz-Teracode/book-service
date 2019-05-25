@@ -2,13 +2,13 @@ package service
 
 import (
 	"context"
-	"github.com/jedi4z/gRPC-example/service-definitions/book-service"
+	svc "github.com/jedi4z/books-service/grpc"
 	"log"
 )
 
 // GetBook returns a book
-func (s *Server) GetBook(ctx context.Context, in *book_service.BookRequest) (*book_service.BookResponse, error) {
-	book := &book_service.BookResponse{
+func (s *Server) GetBook(ctx context.Context, in *svc.BookRequest) (*svc.BookResponse, error) {
+	book := &svc.BookResponse{
 		Uuid: "ed03d133-4a24-433a-997c-a3bb22cfe869",
 		Name: "Concurrency in Go",
 		Isbn: 9781234567897,

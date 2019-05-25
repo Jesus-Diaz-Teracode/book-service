@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/jedi4z/gRPC-example/books-service/service"
-	"github.com/jedi4z/gRPC-example/service-definitions/book-service"
+	svc "github.com/jedi4z/books-service/grpc"
+	"github.com/jedi4z/books-service/service"
 	"google.golang.org/grpc"
 	"log"
 	"net"
@@ -19,7 +19,7 @@ func main(){
 	}
 
 	s := grpc.NewServer()
-	book_service.RegisterBookServer(s, &service.Server{})
+	svc.RegisterBookServer(s, &service.Server{})
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
