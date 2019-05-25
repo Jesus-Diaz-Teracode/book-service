@@ -1,0 +1,9 @@
+version: "3"
+services:
+  books_service:
+    hostname: books-service
+    container_name: books-service
+    build:
+      context: .
+    ports:
+      - "50051:50051"
